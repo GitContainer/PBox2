@@ -1,0 +1,12 @@
+[submodule "3rdparty/Delphi-FFMPEG"]
+	path = 3rdparty/Delphi-FFMPEG
+	url = https://github.com/Laex/Delphi-FFMPEG.git
+[submodule "3rdparty/NtUtilsLibrary"]
+	path = 3rdparty/NtUtilsLibrary
+	url = https://github.com/diversenok/NtUtilsLibrary.git
+[submodule "3rdparty/mORMot"]
+	path = 3rdparty/mORMot
+	url = https://github.com/synopse/mORMot.git
+[submodule "3rdparty/Neslib.Clang"]
+	path = 3rdparty/Neslib.Clang
+	url = https://github.com/neslib/Neslib.Clang.git

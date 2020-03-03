@@ -1,0 +1,7 @@
+*.identcache
+*.dproj.local
+*.local
+*.dcu
+/bin/Win64/plugins/x64dbg/release/x64/x64dbg.ini
+/bin/Win32/plugins/x64dbg/release/x32/x32dbg.ini
+/DOC/DB/EncPass/Win32/Release/EncPass.dll

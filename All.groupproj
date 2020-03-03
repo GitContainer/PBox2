@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{9D98D0DD-897E-4DD6-AC00-3924F6C4C6B9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PBox.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\DllExp\DllExp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\pdfview\pdfview.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\PEInfo\PEInfo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\PM\PM.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\SysSPath\sp.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\HexEdit\HexEdit.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Module\DBView\DBView.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PBox">
+        <MSBuild Projects="PBox.dproj"/>
+    </Target>
+    <Target Name="PBox:Clean">
+        <MSBuild Projects="PBox.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PBox:Make">
+        <MSBuild Projects="PBox.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DllExp">
+        <MSBuild Projects="Module\DllExp\DllExp.dproj"/>
+    </Target>
+    <Target Name="DllExp:Clean">
+        <MSBuild Projects="Module\DllExp\DllExp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DllExp:Make">
+        <MSBuild Projects="Module\DllExp\DllExp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="pdfview">
+        <MSBuild Projects="Module\pdfview\pdfview.dproj"/>
+    </Target>
+    <Target Name="pdfview:Clean">
+        <MSBuild Projects="Module\pdfview\pdfview.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="pdfview:Make">
+        <MSBuild Projects="Module\pdfview\pdfview.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PEInfo">
+        <MSBuild Projects="Module\PEInfo\PEInfo.dproj"/>
+    </Target>
+    <Target Name="PEInfo:Clean">
+        <MSBuild Projects="Module\PEInfo\PEInfo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PEInfo:Make">
+        <MSBuild Projects="Module\PEInfo\PEInfo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PM">
+        <MSBuild Projects="Module\PM\PM.dproj"/>
+    </Target>
+    <Target Name="PM:Clean">
+        <MSBuild Projects="Module\PM\PM.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PM:Make">
+        <MSBuild Projects="Module\PM\PM.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="sp">
+        <MSBuild Projects="Module\SysSPath\sp.dproj"/>
+    </Target>
+    <Target Name="sp:Clean">
+        <MSBuild Projects="Module\SysSPath\sp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sp:Make">
+        <MSBuild Projects="Module\SysSPath\sp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="HexEdit">
+        <MSBuild Projects="Module\HexEdit\HexEdit.dproj"/>
+    </Target>
+    <Target Name="HexEdit:Clean">
+        <MSBuild Projects="Module\HexEdit\HexEdit.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HexEdit:Make">
+        <MSBuild Projects="Module\HexEdit\HexEdit.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DBView">
+        <MSBuild Projects="Module\DBView\DBView.dproj"/>
+    </Target>
+    <Target Name="DBView:Clean">
+        <MSBuild Projects="Module\DBView\DBView.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DBView:Make">
+        <MSBuild Projects="Module\DBView\DBView.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PBox;DllExp;pdfview;PEInfo;PM;sp;HexEdit;DBView"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PBox:Clean;DllExp:Clean;pdfview:Clean;PEInfo:Clean;PM:Clean;sp:Clean;HexEdit:Clean;DBView:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PBox:Make;DllExp:Make;pdfview:Make;PEInfo:Make;PM:Make;sp:Make;HexEdit:Make;DBView:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
