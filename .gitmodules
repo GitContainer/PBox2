@@ -7,6 +7,3 @@
 [submodule "3rdparty/mORMot"]
 	path = 3rdparty/mORMot
 	url = https://github.com/synopse/mORMot.git
-[submodule "3rdparty/Neslib.Clang"]
-	path = 3rdparty/Neslib.Clang
-	url = https://github.com/neslib/Neslib.Clang.git
